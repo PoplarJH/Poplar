@@ -17,8 +17,9 @@ if(isset($_GET['login'])) {
 	//Überprüfung des Passworts
 	if ($user !== false && $pass !== false ) {
 		setcookie("bid",$user['BID'],0); 
+  header("Location: http://localhost/Poplar/phpLoginTest/Fragen.php");
+        exit;
 
-		die('Login erfolgreich. Weiter zu <a href="Fragen.php">internen Bereich</a>');
 	} else {
 		$errorMessage = "Benutzername oder Passwort war ungültig<br>";
 	}
