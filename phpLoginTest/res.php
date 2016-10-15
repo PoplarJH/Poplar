@@ -26,7 +26,7 @@ if(!isset($_SESSION['id'])) {
 }
  
 //Abfrage der Nutzer ID vom Login
-$id = $_SESSION['id'];
+$id = $_COOKIE["bid"];
  
 echo "Hallo User: ".$id;
 ?>

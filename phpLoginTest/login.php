@@ -16,8 +16,9 @@ if(isset($_GET['login'])) {
 		
 	//Überprüfung des Passworts
 	if ($user !== false && $pass !== false ) {
-		$_SESSION['id'] = $user['BID'];
-		die('Login erfolgreich. Weiter zu <a href="res.php">internen Bereich</a>');
+		setcookie("bid",$user['BID'],0); 
+
+		die('Login erfolgreich. Weiter zu <a href="Fragen.php">internen Bereich</a>');
 	} else {
 		$errorMessage = "Benutzername oder Passwort war ungültig<br>";
 	}
@@ -79,62 +80,5 @@ function myFunction() {
     }
 }
 </script>
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
 </body>
 </html>

@@ -12,7 +12,7 @@ body {
     padding: 0px;
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     font-size: 10.5pt;
-    background-color:;
+    background-color:#fff;
     
 }
 
@@ -24,7 +24,7 @@ ul.topnav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #454545;
+    background-color: #000;
 }
 
 /* Float the list items side by side */
@@ -42,7 +42,7 @@ ul.topnav li a {
 }
 
 /* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #86ba01;}
+ul.topnav li a:hover {background-color: #222;}
 
 h1, h2, h3 {
     margin: 0;
@@ -331,45 +331,4 @@ ul.style3 .date
 .entry
 {
 	margin-bottom: 30px;
-}
-input{
-    border-radius: 3%;
-}
-input[type=text] {
-    width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 1.4em;
-}
-input[type=password] {
-    width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 1.4em;
-}
-input[type=submit] {
-    width: ;
-    margin-top: 1%;
-    box-sizing: border-box;
-     background-color: #86ba01;
-    border: none;
-    color: white;
-    font-size: 1.4em;
-    padding: 16px 32px;
-    text-decoration: none;
-    cursor: crosshair;
-    height: auto;
-    font-family: "Avenir Next";
-}
-
-input:focus {
-    border: 4px;
-    border-color: black;
-    background-color: #efefef;
-}
-form{
-    font-family: "Hiragino Kaku Gothic Pro";
-    font-size: 1.3em;
 }
