@@ -53,10 +53,10 @@ if(isset($errorMessage)) {
 ?>
  
 <form action="?login=1" method="post">
-Benutzername:<br>
+<p class="eingabe">Benutzername:</p>
 <input type="text" size="40" maxlength="250" name="benutzername"><br><br>
  
-Dein Passwort:<br>
+<p class="eingabe">Dein Passwort:</p>
 <input type="password" size="40"  maxlength="250" name="password"><br>
  
 <input type="submit" value="Abschicken">
