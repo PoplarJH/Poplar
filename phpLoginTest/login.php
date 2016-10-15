@@ -1,21 +1,25 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+$pdo = new PDO('mysql:host=localhost;dbname=poplar', 'root', '');
  
 if(isset($_GET['login'])) {
-	$username = $_POST['username'];
-	$passwort = $_POST['passwort'];
+	$benutzername = $_POST['benutzername'];
+	$password	= $_POST['password'];
 	
-	$statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-	$result = $statement->execute(array('username' => $username));
+	$statement = $pdo->prepare("SELECT * FROM benutzer WHERE benutzername = :benutzername");
+	$result = $statement->execute(array('benutzername' => $benutzername));
 	$user = $statement->fetch();
+	
+	$check = $pdo->prepare("SELECT * FROM benutzer WHERE password = :password");
+	$res = $check->execute(array('password' => $password));
+	$pass = $check->fetch();
 		
 	//Überprüfung des Passworts
-	if ($user !== false && password_verify($passwort, $user['passwort'])) {
-		$_SESSION['userid'] = $user['id'];
+	if ($user !== false && $pass !== false ) {
+		$_SESSION['id'] = $user['BID'];
 		die('Login erfolgreich. Weiter zu <a href="res.php">internen Bereich</a>');
 	} else {
-		$errorMessage = "E-Mail oder Passwort war ungültig<br>";
+		$errorMessage = "Benutzername oder Passwort war ungültig<br>";
 	}
 	
 }
@@ -34,11 +38,11 @@ if(isset($errorMessage)) {
 ?>
  
 <form action="?login=1" method="post">
-E-Mail:<br>
-<input type="email" size="40" maxlength="250" name="username"><br><br>
+Benutzername:<br>
+<input type="text" size="40" maxlength="250" name="benutzername"><br><br>
  
 Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
+<input type="password" size="40"  maxlength="250" name="password"><br>
  
 <input type="submit" value="Abschicken">
 </form> 

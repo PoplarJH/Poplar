@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['userid'])) {
+if(!isset($_SESSION['id'])) {
 	die('Bitte zuerst <a href="login.php">einloggen</a>');
 }
  
 //Abfrage der Nutzer ID vom Login
-$userid = $_SESSION['userid'];
+$id = $_SESSION['id'];
  
-echo "Hallo User: ".$userid;
+echo "Hallo User: ".$id;
 ?>
