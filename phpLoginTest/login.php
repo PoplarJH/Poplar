@@ -27,11 +27,26 @@ if(isset($_GET['login'])) {
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>Login</title>	
+   <title>Poplar</title>
+        <meta charset="utf-8">
+        <meta content="Wie Tinder - Nur anders und besser!">
+
+		<link href="./pic_css/css.css" rel="stylesheet" type="text/css" media="all">
 </head> 
 <body>
  
-<?php 
+ <ul class="topnav" id="myTopnav">
+  <li><a href="./login.php">Login</a></li> <li><a href="./reg.php">Registrieren</a></li>
+  
+  
+</ul>
+    <div id="toplogo">
+        <a href="login.php"><img class="logo" src="./pic_css/poplarlogo.png" alt="Poplar" width="400"></a>
+    </div>
+ 
+    <div class="content" align="center">
+      
+	  <?php 
 if(isset($errorMessage)) {
 	echo $errorMessage;
 }
@@ -46,5 +61,80 @@ Dein Passwort:<br>
  
 <input type="submit" value="Abschicken">
 </form> 
+	  
+
+
+    </div>
+  
+    <div id="footer" class="container">
+        
+    </div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 </body>
 </html>
