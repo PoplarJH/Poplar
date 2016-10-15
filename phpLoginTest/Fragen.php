@@ -65,7 +65,7 @@ if (isset($_GET['fragen'])) {
 
 		
 		if($result) {		
-			echo 'Fragen angekommen <a href="chat.php">Zum Chat</a>';
+			echo 'Fragen angekommen <a href="match.php">Zum MatchMaking</a>';
 			$showFormular = false;
 		} else {
 			echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';

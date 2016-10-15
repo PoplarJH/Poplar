@@ -343,9 +343,7 @@ input[type=text] {
      width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
-
-    
-    box-sizing: border-box;
+	box-sizing: border-box;
     font-size: 1.4em;
 }
 input[type=password] {
@@ -355,6 +353,7 @@ input[type=password] {
     box-sizing: border-box;
     font-size: 1.4em;
 }
+
 input[type=submit] {
     width:;
     margin-top: 1%;

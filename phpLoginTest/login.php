@@ -4,7 +4,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=poplar', 'root', '');
  
 if(isset($_GET['login'])) {
 	$benutzername = $_POST['benutzername'];
-	$password	= $_POST['password'];
+	$password	= sha1($_POST['password'] . 42);
 	
 	$statement = $pdo->prepare("SELECT * FROM benutzer WHERE benutzername = :benutzername");
 	$result = $statement->execute(array('benutzername' => $benutzername));

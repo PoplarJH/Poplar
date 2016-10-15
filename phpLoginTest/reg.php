@@ -29,8 +29,8 @@ $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden s
 if(isset($_GET['register'])) {
 	$error = false;
 	$benutzername = $_POST['benutzername'];
-	$password = $_POST['password'];
-	$password2 = $_POST['password2'];
+	$password = sha1($_POST['password'] . 42);
+	$password2 =sha1( $_POST['password2'] . 42);
   
 	
 	if(strlen($password) == 0) {
@@ -73,8 +73,8 @@ if($showFormular) {
 ?>
  
 <form action="?register=1" method="post">
-E-Mail:<br>
-<input type="benutzername" size="40" maxlength="250" name="benutzername"><br><br>
+Username:<br>
+<input type="text" size="40" maxlength="250" name="benutzername"><br><br>
  
 Dein Passwort:<br>
 <input type="password" size="40"  maxlength="250" name="password"><br>
