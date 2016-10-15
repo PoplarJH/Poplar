@@ -340,7 +340,7 @@ input{
     border-radius: 3%;
 }
 input[type=text] {
-    width: 40%;
+     width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
 
@@ -381,7 +381,7 @@ input:focus {
 
 
 form{
-    font-family: "Hiragino Kaku Gothic Pro";
+    font-family: "Hiragino Kaku Gothic Pro", sans-serif;
     font-size: 1.3em;
 }
 
