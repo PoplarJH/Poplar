@@ -3,7 +3,7 @@ Get to learn new people- Without pictures, but based on funny and interesting qu
 
 Made with dirty PHP, dirty SQL, dirty CSS and clean HTML.
 
-##Installation
+## Installation
 
 1. copy everything to root of webserver
 2. create Database named poplar
