@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2016 at 12:16 PM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.6.15
+-- Erstellungszeit: 15. Okt 2016 um 18:06
+-- Server-Version: 10.1.16-MariaDB
+-- PHP-Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `poplar`
+-- Datenbank: `poplar`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anfragen`
+-- Tabellenstruktur für Tabelle `anfragen`
 --
 
 CREATE TABLE `anfragen` (
@@ -35,19 +35,19 @@ CREATE TABLE `anfragen` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `antwort`
+-- Tabellenstruktur für Tabelle `antwort`
 --
 
 CREATE TABLE `antwort` (
   `BID` int(11) NOT NULL,
   `FID` int(11) NOT NULL,
-  `antwort` int(11) NOT NULL
+  `antwort` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `benutzer`
+-- Tabellenstruktur für Tabelle `benutzer`
 --
 
 CREATE TABLE `benutzer` (
@@ -57,17 +57,19 @@ CREATE TABLE `benutzer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `benutzer`
+-- Daten für Tabelle `benutzer`
 --
 
 INSERT INTO `benutzer` (`BID`, `benutzername`, `Password`) VALUES
 (1, 'Horst', '123456'),
-(2, 'Mareike', '4321');
+(2, 'Mareike', '4321'),
+(3, 'b', 'b'),
+(4, 'bob', 'bas');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `frage`
+-- Tabellenstruktur für Tabelle `frage`
 --
 
 CREATE TABLE `frage` (
@@ -76,49 +78,89 @@ CREATE TABLE `frage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `frage`
+-- Daten für Tabelle `frage`
 --
 
 INSERT INTO `frage` (`FID`, `Frage`) VALUES
 (1, 'Magst du Bratwurst?'),
-(2, 'Was ist dein Lieblingsessen?');
+(2, 'Was ist dein Lieblingsessen?'),
+(3, 'Was ist dein Lieblingsbuch?'),
+(4, 'Magst du Bratwurst?'),
+(5, 'Wann und wie oft duschst du?'),
+(6, 'Wie hell ist es im deinem Zimmer während du schläfst?'),
+(7, 'Hast du dein Fenster offen, wenn du schläfst?'),
+(8, 'Warum ist die Banane krumm?'),
+(9, 'Magst du Brokkoli?'),
+(10, 'Magst du Tiere?'),
+(11, 'Hunde oder Katzen?'),
+(12, 'Was sind die weißen Streifen hinter Flugzeugen?'),
+(13, 'Android oder IOS?'),
+(14, 'Wie lange schläfst du morgens?'),
+(15, 'Was ist dein Lieblingswitz?'),
+(16, 'Warmes oder kaltes Abendessen?'),
+(17, 'Lieblingsjahreszeit?'),
+(18, 'Was trinkst du am liebsten?'),
+(19, 'Isst du viel?'),
+(20, 'Würdest du nächste Woche gerne auf einen Baum klettern?'),
+(21, 'Was ist deine Superkraft?'),
+(22, 'Was war dein erster Berufswunsch?'),
+(23, 'Was ist wichtiger, Familie oder Freunde?'),
+(24, 'Naturwissenschaften oder Sprachen?'),
+(25, 'Wieso existierst du?'),
+(26, 'Was ist das wichtigste in deinem Leben?'),
+(27, 'Wie willst du sterben?'),
+(28, 'Wie alt willst du werden?'),
+(29, 'Was siehst du, wenn du in den Spiegel schaust?'),
+(30, 'Was ist dein Traumurlaubsziel?'),
+(31, 'Wie stellst du dir die Welt in 30 Jahren vor?'),
+(32, 'Glaubst du an Schicksal?'),
+(33, 'Was denkst du, wenn du Nachrichten schaust?'),
+(34, 'Wie wichtig ist dir Geld?'),
+(35, 'Was sind Freunde für dich?'),
+(36, 'Was macht die Menschen zu Menschen?'),
+(37, 'Was ist Glück?'),
+(38, 'Arbeitest du gerne in einem Team?'),
+(39, 'Ist dir Umweltschutzwichtig?'),
+(40, 'Die Welt ist...'),
+(41, 'Welche zwei Dinge magst du an dir?'),
+(42, 'Wie findest du dich in einer fremden Stadt zurecht?');
 
 --
--- Indexes for dumped tables
+-- Indizes der exportierten Tabellen
 --
 
 --
--- Indexes for table `antwort`
+-- Indizes für die Tabelle `antwort`
 --
 ALTER TABLE `antwort`
-  ADD PRIMARY KEY (`FID`);
+  ADD PRIMARY KEY (`BID`,`FID`);
 
 --
--- Indexes for table `benutzer`
+-- Indizes für die Tabelle `benutzer`
 --
 ALTER TABLE `benutzer`
   ADD PRIMARY KEY (`BID`);
 
 --
--- Indexes for table `frage`
+-- Indizes für die Tabelle `frage`
 --
 ALTER TABLE `frage`
   ADD PRIMARY KEY (`FID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT für exportierte Tabellen
 --
 
 --
--- AUTO_INCREMENT for table `benutzer`
+-- AUTO_INCREMENT für Tabelle `benutzer`
 --
 ALTER TABLE `benutzer`
-  MODIFY `BID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `BID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `frage`
+-- AUTO_INCREMENT für Tabelle `frage`
 --
 ALTER TABLE `frage`
-  MODIFY `FID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `FID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
